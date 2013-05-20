@@ -46,7 +46,7 @@ set autoindent		" always set autoindenting on
 set wrap			" wrap lines
 set linebreak		" break lines when wrapping
 set showbreak=>		" symbol for wrapped lines is =>
-set clipboard=unnamed " share clipboard with mac
+"set clipboard=unnamed " share clipboard with mac
 set lazyredraw		" Don't update the display while executing macros
 
 set history=1000         " remember more commands and search history
@@ -142,6 +142,10 @@ else
 	colors default
 	"colors desert
 endif
+
+"if $TMUX == ''
+    "set clipboard+=unnamed
+"endif
 
 func! WordProcessorMode() 
   setlocal formatoptions=1 
